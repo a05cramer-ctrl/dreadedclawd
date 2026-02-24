@@ -101,7 +101,9 @@ export function Hero() {
           className="flex items-center justify-center gap-3 mb-12"
         >
           <a
-            href="#"
+            href="https://x.com/DreadedClawd"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-white/60 border border-white/15 rounded-lg hover:bg-white/5 transition-colors"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

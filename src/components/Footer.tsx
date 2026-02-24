@@ -29,7 +29,7 @@ export function Footer() {
               A decentralized trading network connecting verified vendors and buyers. Power in every trade.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#" className="text-white/60 hover:text-gold-500 text-sm transition-colors">Twitter</a>
+              <a href="https://x.com/DreadedClawd" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-gold-500 text-sm transition-colors">Twitter</a>
               <a href="#" className="text-white/60 hover:text-gold-500 text-sm transition-colors">Telegram</a>
               <a href="#" className="text-white/60 hover:text-gold-500 text-sm transition-colors">Discord</a>
             </div>
