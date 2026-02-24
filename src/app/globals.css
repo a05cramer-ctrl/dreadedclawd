@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #D4AF37;
+  --gold-dim: rgba(212, 175, 55, 0.15);
+  --charcoal: #0d0d0d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, #050505 0%, #0d0d0d 50%, #050505 100%);
+}
+
+/* Custom gold glow for text - slow pulse */
+.gold-glow {
+  animation: gold-glow-pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes gold-glow-pulse {
+  0% { text-shadow: 0 0 20px rgba(212, 175, 55, 0.2); }
+  100% { text-shadow: 0 0 50px rgba(212, 175, 55, 0.5); }
+}
+
+/* Glassmorphism utility */
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
