@@ -37,7 +37,7 @@ export function Tokenomics() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {allocations.map((item, i) => (
+          {allocations.map((item) => (
             <div
               key={item.label}
               className="glass rounded-xl p-6 lg:p-8 text-center hover:border-gold-600/30 transition-colors"

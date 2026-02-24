@@ -2,32 +2,32 @@
 
 import { motion } from 'framer-motion'
 
-const tiers = [
-  {
-    name: 'Observer',
-    requirement: '10K $DCLAW',
-    features: ['Read-only agent dashboard', 'Live trade feed access', 'Community governance voting'],
-    highlight: false,
-  },
-  {
-    name: 'Operator',
-    requirement: '100K $DCLAW',
-    features: ['Full agent control panel', 'Custom strategy parameters', 'Reduced execution fees', 'Priority signal alerts', 'Governance multiplier 3x'],
-    highlight: true,
-  },
-  {
-    name: 'Architect',
-    requirement: '500K $DCLAW',
-    features: ['Deploy custom sub-agents', 'Protocol-level governance', 'Revenue sharing from fees', 'Early strategy access', 'Dedicated on-chain identity'],
-    highlight: false,
-  },
-]
-
 const utilities = [
-  { label: 'Fee Reduction', desc: 'Up to 70% off execution fees based on staked amount.' },
-  { label: 'Staking Yield', desc: 'Earn passive APY from protocol fee revenue.' },
-  { label: 'Agent Access', desc: 'Unlock agent tiers and deploy custom strategies.' },
-  { label: 'Governance', desc: 'Vote on agent parameters, risk limits, and expansion.' },
+  {
+    title: 'Transaction Fee Reductions',
+    description: 'Hold $DCLAW to unlock tiered fee discounts. Higher stakes mean lower costs on every trade.',
+    tier: 'Up to 50% off',
+  },
+  {
+    title: 'Staking Rewards',
+    description: 'Stake your tokens to earn passive yield. Rewards distributed from protocol revenue and ecosystem growth.',
+    tier: 'APY rewards',
+  },
+  {
+    title: 'Governance Voting',
+    description: 'Vote on protocol parameters, new features, and treasury allocation. Your tokens, your decisions.',
+    tier: '1 token = 1 vote',
+  },
+  {
+    title: 'Vendor Verification Access',
+    description: 'Apply for verified vendor status. $DCLAW holders get priority review and reduced verification fees.',
+    tier: 'Priority access',
+  },
+  {
+    title: 'Premium Marketplace Features',
+    description: 'Unlock featured listings, analytics dashboards, and advanced escrow options. Stand out in the network.',
+    tier: 'Exclusive tools',
+  },
 ]
 
 export function TokenUtility() {
@@ -38,75 +38,33 @@ export function TokenUtility() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <p className="text-xs font-mono text-gold-600 uppercase tracking-widest mb-4">Token Design</p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl mb-4">
-            Hold $DCLAW.<br /><span className="text-gold-500">Command the agent.</span>
+            <span className="text-gold-500">$DCLAW</span> Utility
           </h2>
-          <p className="text-white/60 max-w-2xl mx-auto text-lg">
-            The more you hold, the deeper your access. Three tiers. Real utility.
+          <p className="text-white/70 text-lg max-w-3xl mx-auto">
+            Your token unlocks real value across the ecosystem. From fee savings to governance power, $DCLAW is built for active participants.
           </p>
         </motion.div>
 
-        {/* Tier cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {tiers.map((tier, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {utilities.map((item, i) => (
             <motion.div
-              key={tier.name}
+              key={item.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className={`rounded-xl p-6 lg:p-8 relative ${
-                tier.highlight
-                  ? 'bg-gold-600/10 border-2 border-gold-600/60'
-                  : 'glass border border-white/10'
-              }`}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              className="glass rounded-xl p-6 border-l-4 border-gold-600"
             >
-              {tier.highlight && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 text-xs font-semibold bg-gold-600 text-black rounded-full">
-                  Most Popular
-                </span>
-              )}
-              <p className="text-xs font-mono text-gold-600/80 uppercase tracking-widest mb-2">{tier.requirement}</p>
-              <h3 className="font-display font-bold text-2xl mb-5">{tier.name}</h3>
-              <ul className="space-y-3">
-                {tier.features.map(f => (
-                  <li key={f} className="flex items-start gap-2 text-sm text-white/70">
-                    <span className="text-gold-500 mt-0.5 flex-shrink-0">→</span>
-                    {f}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="#"
-                className={`mt-8 block text-center py-3 rounded-lg text-sm font-semibold transition-colors ${
-                  tier.highlight
-                    ? 'bg-gold-600 text-black hover:bg-gold-500'
-                    : 'border border-white/20 text-white/70 hover:bg-white/5'
-                }`}
-              >
-                Get Access
-              </a>
+              <span className="text-xs font-medium text-gold-500 uppercase tracking-wider">{item.tier}</span>
+              <h3 className="font-display font-semibold text-xl mt-2 mb-3">{item.title}</h3>
+              <p className="text-white/70 text-sm">{item.description}</p>
             </motion.div>
           ))}
         </div>
-
-        {/* Utility bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
-        >
-          {utilities.map(u => (
-            <div key={u.label} className="glass rounded-xl p-5">
-              <p className="text-gold-500 font-display font-semibold mb-1">{u.label}</p>
-              <p className="text-white/60 text-sm">{u.desc}</p>
-            </div>
-          ))}
-        </motion.div>
       </div>
     </section>
   )
