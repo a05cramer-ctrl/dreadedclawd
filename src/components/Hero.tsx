@@ -104,7 +104,7 @@ export function Hero() {
             href="https://x.com/DreadedClawd"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-white/60 border border-white/15 rounded-lg hover:bg-white/5 transition-colors"
+            className="flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white/70 border-2 border-white/15 rounded-lg hover:bg-white/5 transition-colors"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -113,7 +113,7 @@ export function Hero() {
           </a>
           <a
             href="#"
-            className="flex items-center justify-center gap-2 px-6 py-3 text-sm font-medium text-white/60 border border-white/15 rounded-lg hover:bg-white/5 transition-colors"
+            className="flex items-center justify-center gap-2 px-8 py-4 font-semibold text-white/70 border-2 border-white/15 rounded-lg hover:bg-white/5 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
