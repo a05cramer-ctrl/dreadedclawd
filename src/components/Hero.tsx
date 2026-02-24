@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { AgentTerminal } from './AgentTerminal'
 
 export function Hero() {
   return (
@@ -123,13 +124,21 @@ export function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex items-center justify-center gap-8 text-sm text-white/50"
+          className="flex items-center justify-center gap-8 text-sm text-white/50 mb-12"
         >
           <span>Smart Contract Secured</span>
           <span>•</span>
           <span>Verified Vendors</span>
           <span>•</span>
           <span>Community Governed</span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <AgentTerminal />
         </motion.div>
       </div>
 
