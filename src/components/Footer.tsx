@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-const CONTRACT_ADDRESS = '0x0000000000000000000000000000000000000000'
+const CONTRACT_ADDRESS = 'CytE1ijdRoKY1NLvbrA2hTeomUUuiyo5wdpFS1Wypump'
 
 export function Footer() {
   const [copied, setCopied] = useState(false)
@@ -58,7 +58,7 @@ export function Footer() {
                 )}
               </button>
             </div>
-            <p className="text-white/50 text-xs mt-2">Ethereum Mainnet</p>
+            <p className="text-white/50 text-xs mt-2">Solana</p>
           </div>
 
           <div>
