@@ -15,6 +15,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://dreadedclawd.com'),
   title: 'Dreaded Clawd | Power in Every Trade',
   description: 'Decentralized trading network connecting verified vendors and buyers in a secure, transparent ecosystem. $DCLAW powers the future of peer-to-peer commerce.',
   keywords: ['Dreaded Clawd', 'DCLAW', 'memecoin', 'Web3', 'decentralized', 'marketplace', 'crypto'],
